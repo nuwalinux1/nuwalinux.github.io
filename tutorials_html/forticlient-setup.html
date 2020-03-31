@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h2>Fullscreen with JavaScript</h2>
+
+
+<video width="100%" controls id="myvideo">
+  <source src="video/tr.mp4" type="video/mp4">
+  <source src="rain.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+
+
+<script>
+var elem = document.getElementById("myvideo");
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+</script>
+
+<div class="copy-section">
+				<div class="container">
+					<div class="footer-top">
+						<p>&copy; 2020 CodeGen ITD. All rights reserved | Design by CodeGen ITSD</a></p>
+					</div>
+				</div>
+			</div>
+
+</body>
+</html>
+
